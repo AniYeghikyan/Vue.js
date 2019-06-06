@@ -68,7 +68,6 @@
         <br />
     </div>
     <div id="map_canvas" style="width:640px; height:480px;"></div>
-    <!--    <div id = "map" style = "width:640px; height:480px;"></div>-->
     <script>
 
         var app = new Vue({
@@ -90,7 +89,6 @@
                     this.data = response.body;
 
                 }, response => {
-                    // error callback
                 });
             },
             methods: {
@@ -104,10 +102,7 @@
                         if (name.search(searchString) != -1 || username.search(searchString) != -1) {
                             this.filterData.push(item);
 
-                            // let map = new google.maps.Map(document.getElementById("result"), {
-                            //     center: { lat: item.address.geo.lat, lng: item.address.geo.lng },
-                            //     zoom: 8
-                            // });
+                   
 
                         }
                     })
